@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +9,23 @@
 </head>
 <body>
 
-  <div class="login-box">
-    <h2>Bem-vindo!</h2>
-    <input type="text" placeholder="Usuário">
-    <input type="password" placeholder="Senha">
-    <button>Entrar</button>
-  </div>
+  <form action="Home.html">
+    <div class="login-box">
+      <h2>Bem-vindo!</h2>
+        <input type="email" id="email" name="email" required min="6" placeholder="E-mail">
+
+        <input type="password" id="password" name="password" min="6" placeholder="Senha">
+
+        <button id="submit">Entrar</button>
+
+        <div class="esquici-senha">
+          <a href="esqueci-senha.html">
+            Esqueci minha senha
+          </a>
+        </div>
+    </div>
+  </form>
+  
 
 </body>
 </html>
