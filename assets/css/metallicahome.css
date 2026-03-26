@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'Metallica';
+    src: url('../fonts/Metallica.ttf') format('truetype');
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: top;
+    background-image: url("../imagens/Sphere_Main-Hero_3x2\ -\ Editado.jpg");
+    color: #eee; /* texto claro */
+    margin: 0;
+    padding: 0;
+}
+
+body > div {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Metallica', Arial, sans-serif;
+    text-align: center;
+    color: #e50914; /* vermelho estilo Metallica */
+    font-size: 10em;
+}
+
+h2 {
+    border-bottom: 2px solid #e50914;
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #e50914;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #222;
+} 
+
+ol {
+    padding-left: 20px;
+}
+
+li {
+    margin: 5px 0;
+}
