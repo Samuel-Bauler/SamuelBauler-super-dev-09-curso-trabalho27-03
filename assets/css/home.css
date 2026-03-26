@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    text-decoration: none;
+
+}
+
+.menu {
+    height: 100px;
+    margin-bottom: 10px;
+    background-color: #000000;
+    
+}
+
+.menu h1 {
+    font-size: 70px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    box-shadow: 0 5px 10px 0 #ff0000 ;
+    height: 100px;
+}
+
+.card-guns {
+    border-top-left-radius: 15px;
+    border-radius: 15px;
+    margin-top: 100px ;
+    margin-left: 400px;
+    display: flex;
+    align-items: center;
+    width: 800px;
+    transition: 0.4s;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card-guns:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 25px rgba(255, 81, 0, 0.5);
+}
+
+.card-guns img {
+    width: 220px;
+    height: 230px;
+}
+
+.conteudo-guns {
+    padding: 20px;
+    color: white;
+}
+
+.conteudo-guns h2 {
+    color: #ff6f00;
+    margin-bottom: 10px;
+    
+}
+
+.conteudo-guns p {
+    color: #ccc;
+}
+a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card-metallica {
+    border-top-left-radius: 15px;
+    border-radius: 15px;
+    margin-top: 100px ;
+    margin-left: 400px;
+    display: flex;
+    align-items: center;
+    width: 700px;
+    transition: 0.4s;
+    border: 1px solid rgba(4, 0, 255, 0.1);
+}
+
+.card-metallica:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 25px rgba(0, 115, 255, 0.5);
+}
+
+.card-metallica img {
+    width: 220px;
+    height: 230px;
+}
+
+.conteudo-metallica {
+    padding: 20px;
+    color: white;
+}
+
+.conteudo-metallica h2 {
+    color: #2f2fd1;
+    margin-bottom: 10px;
+    
+}
+
+.conteudo-metallica p {
+    color: #ccc;
+}
+
+.card-stone {
+    border-top-left-radius: 15px;
+    border-radius: 15px;
+    margin-top: 100px ;
+    margin-left: 400px;
+    display: flex;
+    align-items: center;
+    width: 700px;
+    transition: 0.4s;
+    border: 1px solid rgba(255, 0, 0, 0.1);
+}
+
+.card-stone:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 25px #ff0000;
+}
+
+.card-stone img {
+    width: 220px;
+    height: 230px;
+}
+
+.conteudo-stone {
+    padding: 20px;
+    color: white;
+}
+
+.conteudo-stone h2 {
+    color: #ff0000;
+    margin-bottom: 10px;
+    
+}
+
+.conteudo-metallica p {
+    color: #ccc;
+}
+
+.titulo {
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+
+}

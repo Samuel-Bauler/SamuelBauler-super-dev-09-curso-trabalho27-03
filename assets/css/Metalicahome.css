@@ -2,6 +2,6 @@
     width: 200px;
     height: 200px;
     background-image: url('assets/imagens/hq720.jpg');
-    background-size: cover; /* Faz a imagem preencher o quadrado de 200px */
+    background-size: cover; 
     background-position: center;
 }
