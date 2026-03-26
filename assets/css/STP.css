@@ -57,10 +57,17 @@ h3{
     text-align: center;
 }
 .tabela{
+    display: block;
+    margin: auto;
+    width: 100%;
+    text-align: center;
     border: 2px solid rgb(196, 56, 62);
 }
 #nomebanda{
     text-align: center;
 }
-
+.centralizar{
+    display: block;
+    text-align: center;
+}
 /* CONTINUAR TEXTO DE INF SOBRE STB, ANALISAR CLIQUE PARA APARECER INFOS SOBRE STB*/
