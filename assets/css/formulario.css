@@ -3,17 +3,17 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
-  }
+}
 
 body {
-  height: 900px;
+  height: 100vh;
   background: url("../imagens/LOGOGUNS.jpg") no-repeat center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  }
+}
 
-.login-box {
+.formulario-box {
   background: rgba(0, 0, 0, 0.8);
   padding: 60px;
   border-radius: 10px;
@@ -21,13 +21,13 @@ body {
   color: #ffd700  ;
   text-align: center;
   box-shadow: 0 0 15px;
-  }
+}
 
-.login-box h2 {
+.formulario-box h2 {
   margin-bottom: 20px;
 }
 
-.login-box input {
+.formulario-box input {
 
   width: 100%;
   padding: 20px;
@@ -37,9 +37,9 @@ body {
   border: none;
   border-radius: 5px;
   color: #000000;
-  }
+}
 
-.login-box button {
+.formulario-box button {
   width: 100%;
   height: 50px;
   padding: 10px;
@@ -51,13 +51,42 @@ body {
   border-radius: 5px;
   margin-top: 30px;
   transition: 0.3s;
-  }
+}
 
-.login-box button:hover {
-    background: #ffd700;
-    transform: scale(1.1);
+.formulario-box button:hover {
+  background: #ffd700;
+  transform: scale(1.1);
 
 }
 
+.formulario-box p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.opcoes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 1px;
+}
+
+.estilo select{
+  height: 35px ;
+  width: 100%; 
+  text-align: center;
+}
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+.checkbox2 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  margin-left: 15px ;
+}
 
     
