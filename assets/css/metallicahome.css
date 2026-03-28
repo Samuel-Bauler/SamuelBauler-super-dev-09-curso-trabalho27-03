@@ -1,67 +1,247 @@
-@font-face {
-    font-family: 'Metallica';
-    src: url('../fonts/Metallica.ttf') format('truetype');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Share+Tech+Mono&display=swap');
+ 
+/* =====================
+   VARIÁVEIS
+   ===================== */
+:root {
+  --preto:       #050505;
+  --carvao:      #0d0d0d;
+  --grafite:     #161616;
+  --grafite-med: #1f1f1f;
+  --borda:       #2a2a2a;
+  --vermelho:    #cc0000;
+  --vermelho-vivo: #ff1a1a;
+  --branco:      #f0f0f0;
+  --cinza-txt:   #aaaaaa;
+  --dourado:     #b8960c;
 }
-
+ 
+/* =====================
+   RESET
+   ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+/* =====================
+   BODY
+   ===================== */
 body {
-    font-family: Arial, sans-serif;
-    background-size: cover;
-    background-position: top;
-    background-image: url("../imagens/Sphere_Main-Hero_3x2\ -\ Editado.jpg");
-    color: #eee; /* texto claro */
-    margin: 0;
-    padding: 0;
+  background-color: var(--preto);
+  /* textura de "aço escovado" com linhas diagonais finas */
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 3px,
+      rgba(255,255,255,0.012) 3px,
+      rgba(255,255,255,0.012) 4px
+    );
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--branco);
+  min-height: 100vh;
 }
-
-body > div {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
+ 
+/* =====================
+   WRAPPER PRINCIPAL
+   ===================== */
+#tudo {
+  width: min(90%, 1000px);
+  margin: 0 auto;
+  padding: 0 0 80px;
 }
-
+ 
+/* =====================
+   LOGO / HERO
+   ===================== */
+#logo {
+  text-align: center;
+  padding: 60px 20px 40px;
+  position: relative;
+  margin-bottom: 0;
+}
+ 
+#logo::after {
+  content: '';
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--vermelho), transparent);
+  margin-top: 30px;
+}
+ 
 h1 {
-    font-family: 'Metallica', Arial, sans-serif;
-    text-align: center;
-    color: #e50914; /* vermelho estilo Metallica */
-    font-size: 10em;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: clamp(4rem, 14vw, 10rem);
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  color: var(--branco);
+  line-height: 0.9;
+ 
+  /* efeito de gravação metálica */
+  text-shadow:
+    0 0 60px rgba(204, 0, 0, 0.5),
+    0 0 120px rgba(204, 0, 0, 0.2),
+    3px 3px 0px #000,
+    6px 6px 0px rgba(0,0,0,0.4);
+ 
+  animation: pulso-titulo 3s ease-in-out infinite alternate;
 }
-
+ 
+@keyframes pulso-titulo {
+  from { text-shadow: 0 0 40px rgba(204,0,0,0.4), 3px 3px 0 #000; }
+  to   { text-shadow: 0 0 80px rgba(204,0,0,0.7), 0 0 160px rgba(204,0,0,0.2), 3px 3px 0 #000; }
+}
+ 
+/* subtítulo automático */
+#logo::before {
+  content: '— Est. 1981 · San Francisco, CA —';
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  color: var(--vermelho);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+ 
+/* =====================
+   SEÇÕES (cards com fundo)
+   ===================== */
+.fundocards,
+#tudo > div {
+  background: var(--grafite);
+  border: 1px solid var(--borda);
+  border-left: 4px solid var(--vermelho);
+  padding: 32px 36px;
+  margin-top: 32px;
+  animation: entrar 0.5s ease both;
+}
+ 
+.fundocards:nth-child(2) { animation-delay: 0.1s; }
+.fundocards:nth-child(3) { animation-delay: 0.2s; }
+#tudo > div:nth-child(4) { animation-delay: 0.3s; }
+#tudo > div:nth-child(5) { animation-delay: 0.4s; }
+#tudo > div:nth-child(6) { animation-delay: 0.5s; }
+ 
+@keyframes entrar {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+ 
+/* =====================
+   H2 das seções
+   ===================== */
 h2 {
-    border-bottom: 2px solid #e50914;
-    padding-bottom: 5px;
-    margin-top: 40px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--vermelho-vivo);
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--borda);
 }
-
+ 
+/* =====================
+   TEXTO / PARÁGRAFOS
+   ===================== */
 p {
-    line-height: 1.6;
-    text-align: justify;
+  font-size: 0.88rem;
+  line-height: 1.9;
+  color: var(--cinza-txt);
+  text-align: justify;
 }
-
+ 
+/* =====================
+   TABELAS
+   ===================== */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
 }
-
+ 
 th, td {
-    border: 1px solid #444;
-    padding: 10px;
-    text-align: left;
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--borda);
 }
-
+ 
+thead tr {
+  border-left: 3px solid var(--vermelho);
+}
+ 
 th {
-    background-color: #e50914;
-    color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--vermelho-vivo);
+  background: var(--grafite-med);
+  border-bottom: 2px solid var(--vermelho);
 }
-
-tr:nth-child(even) {
-    background-color: #222;
-} 
-
+ 
+td {
+  color: var(--cinza-txt);
+  transition: color 0.2s, background 0.2s;
+}
+ 
+tr:hover td {
+  color: var(--branco);
+  background: rgba(204,0,0,0.06);
+}
+ 
+tr:last-child td {
+  border-bottom: none;
+}
+ 
+/* =====================
+   LISTA ORDENADA (músicas)
+   ===================== */
 ol {
-    padding-left: 20px;
+  list-style: none;
+  padding: 0;
+  counter-reset: faixas;
 }
-
-li {
-    margin: 5px 0;
+ 
+ol li {
+  counter-increment: faixas;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--borda);
+  color: var(--cinza-txt);
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  cursor: default;
 }
+ 
+ol li:last-child {
+  border-bottom: none;
+}
+ 
+ol li::before {
+  content: counter(faixas, decimal-leading-zero);
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--vermelho);
+  min-width: 36px;
+  line-height: 1;
+}
+ 
+ol li:hover {
+  color: var(--branco);
+}
+ 
+/* =====================
+   SCROLLBAR custom
+   ===================== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--preto); }
+::-webkit-scrollbar-thumb { background: var(--vermelho); border-radius: 0; }
