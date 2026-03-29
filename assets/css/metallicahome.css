@@ -1,5 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Share+Tech+Mono&display=swap');
  
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: black;
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+
+.logo {
+    color: #ffff;
+    margin-left: 500px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav a {
+    color: #ffff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: rgb(255, 0, 0);
+}
+
+.nav img {
+    width: 300px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+
+
+
 /* =====================
    VARIÁVEIS
    ===================== */
