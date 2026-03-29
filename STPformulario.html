@@ -1,1 +1,53 @@
-wdw
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="assets/css/STPformulario.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Stone Temple Pilots</title>
+</head>
+<body>
+<form>
+    <div id="caixaform" class="divnabox">
+    <div class="divnabox">
+    <label for="nome" class="tituloform">Nome:</label>
+    <input type="text" id="nome" name="nome" class="caixaselect" placeholder="Digite seu nome" required>
+    </div>
+    <div class="divnabox">
+    <label for="idade" class="tituloform">Idade:</label>
+    <input type="number" id="idade" class="caixaselect" placeholder="Digite sua idade" required>
+    </div>
+    <div class="divnabox">
+     <label for="data" class="tituloform">Data de nascimento:</label>
+    <input type="date" id="data" min="1" max="200" class="caixaselect" required>
+    </div>
+    <div class="divnabox">
+    <label for="estilomusical" class="tituloform">Qual estilo musical você mais gosta?</label>
+        <select class="caixaselect" required>
+        <option value="" disabled selected>Selecione um estilo musical</option>   
+        <option value="Grunge">Grunge</option>
+        <option value="Metal">Heavy metal</option>
+        <option value="classic">Classic rock</option>
+        <option value="Punk">Punk rock</option>
+        </select>
+    </div>
+    <div>
+        <p>Já escutou algumas dessas músicas? Quais você mais gosta:</p>
+        <div id="areacheckbox">
+        <input type="checkbox" id="cb1" class="checkmsc">
+        <label for="cb1" class="nomebox" value="Interstate Love Song">Interstate Love Song</label>
+
+        <input type="checkbox" id="cb2" class="checkmsc">
+        <label for="cb2" class="nomebox" value="Creep">Creep</label>
+
+        <input type="checkbox" id="cb3" class="checkmsc">
+        <label for="cb3" class="nomebox" value="Plush">Plush</label>
+
+        <input type="checkbox" id="cb4" class="checkmsc">
+        <label for="cb4" class="nomebox" value="Sex type thing">Sex type thing</label>
+        </div>
+        </div>
+        </div>
+</form>
+</body>
+</html>

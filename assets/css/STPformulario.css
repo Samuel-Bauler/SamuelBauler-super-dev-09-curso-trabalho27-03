@@ -1,0 +1,45 @@
+body{
+    color: white;
+    font-family: arial;
+}
+#caixaform{
+    text-align: center;
+    background-color: #242525;
+    margin: 20px 80px;
+}
+.divnabox{
+    margin: 20px 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+}
+
+.caixaselect{
+    border-radius: 10px;
+    width: 500px;
+    height: 40px;
+    text-align: center;
+}
+.checkmsc{
+    cursor: pointer;
+    position: absolute;
+    padding: 10px;
+    opacity: 10px;
+}
+.checkmark{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(240, 240, 240);
+    border: 2px solid black;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+}
+input[type="checkbox"]{
+    width: 25px;
+    height: 25px;
+    gap: 20px;
+}
+#areacheckbox{
+}
