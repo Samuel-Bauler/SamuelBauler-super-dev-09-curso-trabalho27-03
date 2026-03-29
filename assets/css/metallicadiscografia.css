@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --preto:         #050505;
+  --carvao:        #0d0d0d;
+  --grafite:       #161616;
+  --grafite-med:   #1f1f1f;
+  --borda:         #2a2a2a;
+  --vermelho:      #0055cc;
+  --vermelho-vivo: #3399ff;
+  --branco:        #f0f0f0;
+  --cinza-txt:     #aaaaaa;
+  --dourado:       #0077ff;
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background-color: var(--preto);
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 3px,
+      rgba(255,255,255,0.012) 3px,
+      rgba(255,255,255,0.012) 4px
+    );
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--branco);
+  min-height: 100vh;
+}
+
+
+body > div {
+  width: min(92%, 1100px);
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+
+body > div > div:first-child {
+  text-align: center;
+  padding: 60px 20px 40px;
+  position: relative;
+}
+
+body > div > div:first-child::before {
+  content: '— Discografia Completa —';
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  color: var(--vermelho);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+body > div > div:first-child::after {
+  content: '';
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--vermelho), transparent);
+  margin-top: 30px;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: var(--branco);
+  line-height: 0.9;
+  text-shadow:
+    0 0 60px rgba(0, 85, 204, 0.5),
+    0 0 120px rgba(0, 85, 204, 0.2),
+    3px 3px 0px #000,
+    6px 6px 0px rgba(0,0,0,0.4);
+  animation: pulso-titulo 3s ease-in-out infinite alternate;
+}
+
+@keyframes pulso-titulo {
+  from { text-shadow: 0 0 40px rgba(0, 85, 204,0.4), 3px 3px 0 #000; }
+  to   { text-shadow: 0 0 80px rgba(0, 85, 204,0.7), 0 0 160px rgba(0, 85, 204,0.2), 3px 3px 0 #000; }
+}
+
+
+.boxsubtitulos {
+  margin-top: 48px;
+  margin-bottom: 28px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--vermelho);
+  position: relative;
+}
+
+.subtitulos {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--vermelho-vivo);
+}
+
+.subtitulos::before {
+  content: '▶ ';
+  color: var(--vermelho);
+  font-size: 1.2rem;
+}
+
+
+#albuns {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.linhasalbuns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+
+.iconalbuns {
+  background: var(--grafite);
+  border: 1px solid var(--borda);
+  border-top: 3px solid var(--vermelho);
+  padding: 0 0 16px;
+  cursor: default;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  animation: entrar 0.5s ease both;
+  overflow: hidden;
+}
+
+.iconalbuns:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 85, 204, 0.3);
+  border-color: var(--vermelho-vivo);
+}
+
+@keyframes entrar {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+.img-albuns {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--grafite-med);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.iconalbuns:hover .img-albuns::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 85, 204, 0.12);
+}
+
+/* placeholder quando não há imagem */
+.img-albuns:empty::before {
+  content: '🎵';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  opacity: 0.2;
+}
+
+
+#album1  { background-image: url('../imagens/Metalica/72-seasons_cover.jpeg'); }
+#album2  { background-image: url('../imagens/Metalica/sm2_cover.jpeg'); }
+#album3  { background-image: url('../imagens/Metalica/hardwired-to-self-destruct_cover.jpeg'); }
+#album4  { background-image: url('../imagens/Metalica/death-magnetic_cover.jpeg'); }
+#album5  { background-image: url('../imagens/Metalica/metallica-through-the-never_cover.jpeg'); }
+#album6  { background-image: url('../imagens/Metalica/st-anger_cover.jpeg'); }
+#album7  { background-image: url('../imagens/Metalica/sm_cover.jpeg'); }
+#album8  { background-image: url('../imagens/Metalica/garage-inc_cover.jpeg'); }
+#album9  { background-image: url('../imagens/Metalica/reload_cover.jpeg'); }
+#album10 { background-image: url('../imagens/Metalica/load_cover.jpeg'); }
+#album11 { background-image: url('../imagens/Metalica/the-black-album_cover.jpeg'); }
+#album12 { background-image: url('../imagens/Metalica/and-justice-for-all_cover.jpeg'); }
+#album13 { background-image: url('../imagens/Metalica/garage-days-re-revisited_cover.jpeg'); }
+#album14 { background-image: url('../imagens/Metalica/master-of-puppets_cover.jpeg'); }
+#album15 { background-image: url('../imagens/Metalica/ride-the-lightning_cover.jpeg'); }
+#album16 { background-image: url('../imagens/Metalica/kill-em-all_cover.jpeg'); }
+
+
+.lacamento,
+.lancamento {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--vermelho);
+  opacity: 0.75;
+  padding: 10px 12px 4px;
+}
+
+
+.tituloalbuns {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--branco);
+  padding: 0 12px;
+  line-height: 1.3;
+}
+
+/* Kill 'Em All — h2 sem classe */
+.linhasalbuns h2:not(.tituloalbuns) {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--branco);
+  padding: 0 12px;
+  line-height: 1.3;
+}
+
+/* sessaão das musicas */
+#listasdemusicas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 8px;
+}
+
+
+/* cards das lista de musicas */
+.boxlistas {
+  background: var(--grafite);
+  border: 1px solid var(--borda);
+  border-left: 4px solid var(--vermelho);
+  padding: 24px 24px 20px;
+  animation: entrar 0.5s ease both;
+  transition: box-shadow 0.25s ease;
+}
+
+.boxlistas:hover {
+  box-shadow: -4px 0 30px rgba(0, 85, 204, 0.15);
+}
+
+/* titulos das listas em h3 */
+.titulolistas {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--vermelho-vivo);
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--borda);
+}
+
+.titulolistas::before {
+  content: '▶ ';
+  color: var(--vermelho);
+  font-size: 0.75rem;
+}
+
+/* lista de musica não ordenada (ul) */
+.listasalbuns {
+  list-style: none;
+  padding: 0;
+  counter-reset: faixas;
+}
+
+.listasalbuns li {
+  counter-increment: faixas;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(42, 42, 42, 0.6);
+  color: var(--cinza-txt);
+  font-size: 0.82rem;
+  font-family: 'Share Tech Mono', monospace;
+  transition: color 0.2s, background 0.2s;
+  cursor: default;
+}
+
+.listasalbuns li:last-child {
+  border-bottom: none;
+}
+
+.listasalbuns li::before {
+  content: counter(faixas, decimal-leading-zero);
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--vermelho);
+  min-width: 28px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.listasalbuns li:hover {
+  color: var(--branco);
+  padding-left: 4px;
+}
+
+/* responsivo */
+@media (max-width: 900px) {
+  .linhasalbuns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .linhasalbuns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  [id="listasde musicas"] {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--preto); }
+::-webkit-scrollbar-thumb { background: var(--vermelho); border-radius: 0; }
