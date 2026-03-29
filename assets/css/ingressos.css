@@ -1,0 +1,140 @@
+body {
+    background-color: #1a1a1a;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: black;
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+
+.logo {
+    color: #ffff;
+    margin-left: 500px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav a {
+    color: #ffff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: red;
+}
+
+.nav img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.ingressos-card {
+    display: flex;
+    align-items: center;
+    background: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    padding: 24px 28px;
+    gap: 28px;
+    transition: background 0.2s;
+    border-radius: 20px ;
+    margin-top: 40px ;
+    height: 150px;
+}
+
+.ingressos-card:hover {
+    background: #313131;
+}
+
+    
+.date-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 64px;
+    color: #aaa;
+  }
+
+.date-block .month {
+    font-size: 15px;
+    font-weight: 700;
+    color: #888;
+}
+
+.date-block .day {
+    font-size: 56px;
+    line-height: 1;
+    color: #e0e0e0;
+}
+
+.date-block .year {
+    font-size: 12px;
+    color: #666;
+    letter-spacing: 0.08em;
+}
+
+    
+.block{
+    width: 3px;
+    align-self: stretch;
+    background: #3a3a3a;
+    flex-shrink: 0;
+}
+
+    
+.info-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.city {
+    font-size: 26px;
+    color: #f0a500;
+
+}
+
+.venue {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #888;
+    margin-top: 2px;
+}
+
+.guest {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 6px;
+    font-weight: 600;
+}
+
+.ticket-botao {
+    padding: 12px 28px;
+    border: 2px solid #f0a500;
+    background: transparent;
+    color: #f0a500;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, 0.5s;
+    text-decoration: none;
+    align-items: center;
+}
+
+.ticket-botao:hover {
+    background: #f0a500;
+    color: #1a1a1a;
+    transform: scale(1.1) ;
+}
