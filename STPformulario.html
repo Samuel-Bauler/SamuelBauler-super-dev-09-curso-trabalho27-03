@@ -7,9 +7,14 @@
     <title>Formulário Stone Temple Pilots</title>
 </head>
 <body>
-<form>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+<form action="enviadostp.html" method="get">
     <div id="caixaform" class="divnabox">
     <div class="divnabox">
+        <span class="divnabox">
+        <h1>Formulário</h1>
     <label for="nome" class="tituloform">Nome:</label>
     <input type="text" id="nome" name="nome" class="caixaselect" placeholder="Digite seu nome" required>
     </div>
@@ -32,22 +37,32 @@
         </select>
     </div>
     <div>
-        <p>Já escutou algumas dessas músicas? Quais você mais gosta:</p>
+        <p><div>Já escutou algumas dessas músicas?</div> Quais você mais gosta:</p>
         <div id="areacheckbox">
-        <input type="checkbox" id="cb1" class="checkmsc">
-        <label for="cb1" class="nomebox" value="Interstate Love Song">Interstate Love Song</label>
+        <span class="boxemlinha">
 
-        <input type="checkbox" id="cb2" class="checkmsc">
-        <label for="cb2" class="nomebox" value="Creep">Creep</label>
+        
+        <label for="cb1" class="nomebox" value="Interstate Love Song"><input type="checkbox" id="cb1" class="checkmsc">Interstate Love Song</label>
+        
 
-        <input type="checkbox" id="cb3" class="checkmsc">
-        <label for="cb3" class="nomebox" value="Plush">Plush</label>
+        
+        <label for="cb2" class="nomebox" value="Creep"><input type="checkbox" id="cb2" class="checkmsc">Creep</label>
 
-        <input type="checkbox" id="cb4" class="checkmsc">
-        <label for="cb4" class="nomebox" value="Sex type thing">Sex type thing</label>
-        </div>
-        </div>
-        </div>
+        
+        <label for="cb3" class="nomebox" value="Plush"><input type="checkbox" id="cb3" class="checkmsc">Plush</label>
+
+        
+        <label for="cb4" class="nomebox" id="stt" value="Sex type thing"><input type="checkbox" id="cb4" class="checkmsc">Sex type thing</label>
+
+    </div>
+</div>
+    <div id="botao">
+    <a href="enviadostp.html">
+    <button type="submit" name="enviar" value="Enviar">Enviar</button>
+    </a>
+    </div> 
+</div>
+</span>
 </form>
 </body>
 </html>

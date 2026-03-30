@@ -16,7 +16,7 @@ body {
     height: 100px;
     margin-bottom: 10px;
     background-color: #000000;
-    
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .menu h1 {
@@ -25,15 +25,16 @@ body {
     text-align: center;
     box-shadow: 0 5px 10px 0 #ff0000 ;
     height: 100px;
+    padding-top: 10px;
 }
 
 .card-guns {
     border-top-left-radius: 15px;
     border-radius: 15px;
-    margin-top: 100px ;
-    margin-left: 400px;
+    margin: 100px auto;
+    align-items: center;    
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
     width: 800px;
     transition: 0.4s;
     border: 1px solid rgba(255,255,255,0.1);
@@ -71,13 +72,13 @@ a {
 .card-metallica {
     border-top-left-radius: 15px;
     border-radius: 15px;
-    margin-top: 100px ;
-    margin-left: 400px;
+    margin: 100px auto;
+    align-items: center;    
     display: flex;
-    align-items: center;
-    width: 700px;
+    justify-content: flex-start;
+    width: 800px;
     transition: 0.4s;
-    border: 1px solid rgba(4, 0, 255, 0.1);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .card-metallica:hover {
@@ -108,18 +109,18 @@ a {
 .card-stone {
     border-top-left-radius: 15px;
     border-radius: 15px;
-    margin-top: 100px ;
-    margin-left: 400px;
+    margin: 100px auto;
+    align-items: center;    
     display: flex;
-    align-items: center;
-    width: 700px;
+    justify-content: flex-start;
+    width: 800px;
     transition: 0.4s;
-    border: 1px solid rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .card-stone:hover {
     transform: scale(1.04);
-    box-shadow: 0 0 25px #ff0000;
+    box-shadow: 0 0 25px rgb(196, 56, 62);
 }
 
 .card-stone img {
@@ -133,7 +134,7 @@ a {
 }
 
 .conteudo-stone h2 {
-    color: #ff0000;
+    color: rgb(196, 56, 62);
     margin-bottom: 10px;
     
 }
