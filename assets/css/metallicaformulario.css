@@ -1,32 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Share+Tech+Mono&display=swap');
 
-/* =====================
-   VARIÁVEIS (idênticas ao home)
-   ===================== */
 :root {
   --preto:         #050505;
   --carvao:        #0d0d0d;
   --grafite:       #161616;
   --grafite-med:   #1f1f1f;
   --borda:         #2a2a2a;
-  --vermelho:      #cc0000;
-  --vermelho-vivo: #ff1a1a;
+  --vermelho:      #0055cc;
+  --vermelho-vivo: #3399ff;
   --branco:        #f0f0f0;
   --cinza-txt:     #aaaaaa;
 }
 
-/* =====================
-   RESET
-   ===================== */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* =====================
-   BODY
-   ===================== */
+
 body {
   background-color: var(--preto);
   background-image:
@@ -46,24 +39,19 @@ body {
   padding: 48px 16px;
 }
 
-/* =====================
-   WRAPPER
-   ===================== */
+
 body > div {
   width: 100%;
   max-width: 580px;
 }
 
-/* =====================
-   FORM CARD
-   ===================== */
 form {
   background: var(--grafite);
   border: 1px solid var(--borda);
   border-left: 4px solid var(--vermelho);
   padding: 44px 40px;
   box-shadow:
-    -4px 0 40px rgba(204, 0, 0, 0.1),
+    -4px 0 40px rgba(0, 85, 204, 0.1),
     0 30px 70px rgba(0,0,0,0.8);
   animation: surgir 0.55s ease both;
 }
@@ -73,9 +61,7 @@ form {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* =====================
-   TÍTULO DO FORM
-   ===================== */
+
 h2 {
   font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
@@ -88,23 +74,19 @@ h2 {
   border-bottom: 1px solid var(--borda);
 }
 
-/* pseudo-elemento decorativo antes do título */
+/* elemento decorativo antes do título */
 h2::before {
   content: '▶ ';
   color: var(--vermelho);
   font-size: 0.9rem;
 }
 
-/* =====================
-   GRUPOS
-   ===================== */
+
 form > div {
   margin-bottom: 22px;
 }
 
-/* =====================
-   LABELS
-   ===================== */
+
 label {
   display: block;
   font-size: 0.7rem;
@@ -115,9 +97,6 @@ label {
   font-family: 'Oswald', sans-serif;
 }
 
-/* =====================
-   INPUTS / TEXTAREA / SELECT
-   ===================== */
 input[type="text"],
 input[type="number"],
 input[type="date"],
@@ -143,7 +122,7 @@ input[type="date"]:focus,
 textarea:focus,
 select:focus {
   border-color: var(--vermelho);
-  box-shadow: 0 0 0 2px rgba(204,0,0,0.2), inset 0 0 0 1px rgba(204,0,0,0.1);
+  box-shadow: 0 0 0 2px rgba(0, 85, 204,0.2), inset 0 0 0 1px rgba(0, 85, 204,0.1);
 }
 
 textarea {
@@ -153,13 +132,13 @@ textarea {
 
 /* ícone calendário */
 input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(0.4) sepia(1) saturate(6) hue-rotate(320deg);
+  filter: invert(0.4) sepia(1) saturate(6) hue-rotate(180deg);
   cursor: pointer;
 }
 
 /* seta do select */
 select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23cc0000' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230055cc' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 14px center;
   padding-right: 38px;
@@ -170,9 +149,6 @@ select option {
   background: var(--grafite);
 }
 
-/* =====================
-   PARÁGRAFO TÍTULO DE GRUPO (radio/checkbox)
-   ===================== */
 form > div > p {
   font-family: 'Oswald', sans-serif;
   font-size: 0.7rem;
@@ -182,9 +158,7 @@ form > div > p {
   margin-bottom: 12px;
 }
 
-/* =====================
-   RADIO & CHECKBOX
-   ===================== */
+
 form > div > input[type="radio"],
 form > div > input[type="checkbox"] {
   appearance: none;
@@ -249,9 +223,7 @@ form > div > input[type="checkbox"]:hover + label {
   color: var(--branco);
 }
 
-/* =====================
-   BOTÃO
-   ===================== */
+
 button[type="submit"] {
   width: 100%;
   padding: 14px;
@@ -272,16 +244,14 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background: var(--vermelho-vivo);
-  box-shadow: 0 0 30px rgba(204,0,0,0.5);
+  box-shadow: 0 0 30px rgba(0, 85, 204,0.5);
 }
 
 button[type="submit"]:active {
   transform: scale(0.98);
 }
 
-/* =====================
-   SCROLLBAR
-   ===================== */
+/* scrolbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--preto); }
 ::-webkit-scrollbar-thumb { background: var(--vermelho); }

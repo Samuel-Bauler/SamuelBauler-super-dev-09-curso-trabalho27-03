@@ -28,7 +28,7 @@
 }
 
 .nav a:hover {
-    color: rgb(255, 0, 0);
+    color: rgb(0, 119, 255);
 }
 
 .nav img {
@@ -37,37 +37,26 @@
     border-radius: 50%;
 }
 
-
-
-
-/* =====================
-   VARIÁVEIS
-   ===================== */
 :root {
   --preto:       #050505;
   --carvao:      #0d0d0d;
   --grafite:     #161616;
   --grafite-med: #1f1f1f;
   --borda:       #2a2a2a;
-  --vermelho:    #cc0000;
-  --vermelho-vivo: #ff1a1a;
+  --vermelho:    #0055cc;
+  --vermelho-vivo: #3399ff;
   --branco:      #f0f0f0;
   --cinza-txt:   #aaaaaa;
-  --dourado:     #b8960c;
+  --dourado:     #0077ff;
 }
  
-/* =====================
-   RESET
-   ===================== */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
  
-/* =====================
-   BODY
-   ===================== */
 body {
   background-color: var(--preto);
   /* textura de "aço escovado" com linhas diagonais finas */
@@ -84,18 +73,14 @@ body {
   min-height: 100vh;
 }
  
-/* =====================
-   WRAPPER PRINCIPAL
-   ===================== */
+
 #tudo {
   width: min(90%, 1000px);
   margin: 0 auto;
   padding: 0 0 80px;
 }
  
-/* =====================
-   LOGO / HERO
-   ===================== */
+
 #logo {
   text-align: center;
   padding: 60px 20px 40px;
@@ -122,8 +107,8 @@ h1 {
  
   /* efeito de gravação metálica */
   text-shadow:
-    0 0 60px rgba(204, 0, 0, 0.5),
-    0 0 120px rgba(204, 0, 0, 0.2),
+    0 0 60px rgba(0, 85, 204, 0.5),
+    0 0 120px rgba(0, 85, 204, 0.2),
     3px 3px 0px #000,
     6px 6px 0px rgba(0,0,0,0.4);
  
@@ -131,11 +116,10 @@ h1 {
 }
  
 @keyframes pulso-titulo {
-  from { text-shadow: 0 0 40px rgba(204,0,0,0.4), 3px 3px 0 #000; }
-  to   { text-shadow: 0 0 80px rgba(204,0,0,0.7), 0 0 160px rgba(204,0,0,0.2), 3px 3px 0 #000; }
+  from { text-shadow: 0 0 40px rgba(0, 85, 204,0.4), 3px 3px 0 #000; }
+  to   { text-shadow: 0 0 80px rgba(0, 85, 204,0.7), 0 0 160px rgba(0, 85, 204,0.2), 3px 3px 0 #000; }
 }
  
-/* subtítulo automático */
 #logo::before {
   content: '— Est. 1981 · San Francisco, CA —';
   display: block;
@@ -147,9 +131,7 @@ h1 {
   opacity: 0.8;
 }
  
-/* =====================
-   SEÇÕES (cards com fundo)
-   ===================== */
+
 .fundocards,
 #tudo > div {
   background: var(--grafite);
@@ -171,9 +153,6 @@ h1 {
   to   { opacity: 1; transform: translateX(0); }
 }
  
-/* =====================
-   H2 das seções
-   ===================== */
 h2 {
   font-family: 'Oswald', sans-serif;
   font-size: 1.6rem;
@@ -186,9 +165,6 @@ h2 {
   border-bottom: 1px solid var(--borda);
 }
  
-/* =====================
-   TEXTO / PARÁGRAFOS
-   ===================== */
 p {
   font-size: 0.88rem;
   line-height: 1.9;
@@ -196,9 +172,6 @@ p {
   text-align: justify;
 }
  
-/* =====================
-   TABELAS
-   ===================== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -232,16 +205,14 @@ td {
  
 tr:hover td {
   color: var(--branco);
-  background: rgba(204,0,0,0.06);
+  background: rgba(0, 85, 204,0.06);
 }
  
 tr:last-child td {
   border-bottom: none;
 }
  
-/* =====================
-   LISTA ORDENADA (músicas)
-   ===================== */
+
 ol {
   list-style: none;
   padding: 0;
@@ -279,9 +250,6 @@ ol li:hover {
   color: var(--branco);
 }
  
-/* =====================
-   SCROLLBAR custom
-   ===================== */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--preto); }
 ::-webkit-scrollbar-thumb { background: var(--vermelho); border-radius: 0; }
